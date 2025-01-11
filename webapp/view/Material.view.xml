@@ -9,7 +9,6 @@
 		items="{path: 'mproducts>/ProductCollection'}" 
         mode="SingleSelectMaster"
 		itemPress="onPressProduct"
-
 		growing="true"
 		growingThreshold="5"
 		growingScrollToLoad="false">

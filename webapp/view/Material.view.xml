@@ -3,15 +3,24 @@
     xmlns="sap.m">
     <Page title="Vista de Materiales">
         <content>
-            <List
-		headerText="Materiales"
-		headerLevel="H2"
-		items="{path: 'mproducts>/ProductCollection'}" 
-        mode="SingleSelectMaster"
-		itemPress="onPressProduct"
-		growing="true"
-		growingThreshold="5"
-		growingScrollToLoad="false">
+
+<!-- BARRA DE BÚSQUEDA -->
+			<OverflowToolbar> 
+				<SearchField width="100%" liveChange=".onSearch" />
+				<!-- <Text text="Buscar" id="idSearchListToolbar" /> -->
+			</OverflowToolbar>
+
+<!-- LISTADO DE MATERIALES -->
+            <List 
+				id="listMaterial"
+				headerText="Materiales"
+				headerLevel="H2"
+				items="{path: 'mproducts>/ProductCollection'}" 
+				mode="SingleSelectMaster"
+				itemPress="onPressProduct"
+				growing="true"
+				growingThreshold="5"
+				growingScrollToLoad="false">
 		<StandardListItem
 			title="{mproducts>Name}"
 			description="{mproducts>Description}"

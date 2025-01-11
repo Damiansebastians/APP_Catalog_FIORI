@@ -13,47 +13,22 @@
                     <f:layoutS>
                         <f:GridContainerSettings rowSize="4rem" columnSize="4rem" gap="0.5rem" />
                     </f:layoutS>
-                        <f:items>
-                            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
-                                        header='Productos' 
-                                        subheader="Nuestros artículos"
-                                        frameType="OneByOne"
-                                        press="OnPressTile"
-                                        headerImage="{mTiles>/Icon}">
+                        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                            header="{mTiles>Title}" 
+                            subheader="{mTiles>Descripcion}" 
+                            press="OnPressTile"
+                            frameType="OneByOne"
+                            headerImage="{mTiles>Icon}">
 
-                                <layoutData>
+                            <layoutData>
                                     <f:GridContainerItemLayoutData rows="2" columns="2" />
-                                </layoutData>
+                            </layoutData>
 
-                                <TileContent>
-                                    <ImageContent src="https://img.freepik.com/vector-premium/icono-computadora-portatil_24908-7210.jpg" />
-                                </TileContent>
-                            </GenericTile>
-
-                            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
-                                        header="Materiales"
-                                        subheader="Nuestros Materiales" 
-                                        press="OnPressTile2">
-                                        
-                                <layoutData>
-                                    <f:GridContainerItemLayoutData rows="2" columns="2" />
-                                </layoutData>
-
-                                <TileContent 
-                                        footer="Excelente Calidad">
-                                    <ImageContent src="sap-icon://home-share" />
-                                </TileContent>
-                            </GenericTile>
-
-                        </f:items>
+                            <TileContent>
+                                <ImageContent src="https://img.freepik.com/vector-premium/icono-computadora-portatil_24908-7210.jpg" />
+                            </TileContent>
+                        </GenericTile>
                 </f:GridContainer>
-
-
-
-
-
-
-
 
             <!-- <VBox>
                 <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"

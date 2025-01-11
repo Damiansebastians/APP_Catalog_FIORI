@@ -7,13 +7,14 @@ sap.ui.define(
     return Controller.extend("appcatalog.controller.Main", {
       onInit() {},
 
-      OnPressTile() {
+      OnPressTile(oEvent) {
+        let viewRoute = oEvent
+          .getSource()
+          .getBindingContext("mTiles")
+          .getObject().View;
+
         let oRouter = UIComponent.getRouterFor(this);
-        oRouter.navTo("ViewList");
-      },
-      OnPressTile2() {
-        let oRouter2 = UIComponent.getRouterFor(this);
-        oRouter2.navTo("ViewMaterial");
+        oRouter.navTo(viewRoute);
       },
     });
   }

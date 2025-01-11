@@ -1,0 +1,27 @@
+<mvc:View controllerName="appcatalog.controller.Material"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Vista de Materiales">
+        <content>
+            <List
+		headerText="Materiales"
+		headerLevel="H2"
+		items="{path: 'mproducts>/ProductCollection'}" 
+        mode="SingleSelectMaster"
+		itemPress="onPressProduct"
+
+		growing="true"
+		growingThreshold="5"
+		growingScrollToLoad="false">
+		<StandardListItem
+			title="{mproducts>Name}"
+			description="{mproducts>Description}"
+			icon="{mproducts>ProductPicUrl}"
+            counter="{Products>Quantity}"
+			type="Active"
+			iconDensityAware="false"
+			iconInset="false" />
+	</List>
+        </content>
+    </Page>
+</mvc:View >

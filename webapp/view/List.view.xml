@@ -1,0 +1,22 @@
+<mvc:View controllerName="appcatalog.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Vista de Listado">
+        <content>
+            <List
+				headerText="Productos" 
+				headerLevel="H2" 
+				items="{Products>/}"
+				mode="SingleSelectMaster"
+				itemPress="onPressProduct">
+				<StandardListItem 
+				title="{Products>Name}" 
+				description="{Products>Description}" 
+				icon="{Products>ProductPicUrl}"
+				counter="{Products>Quantity}"
+				type="Active"
+				/>
+	</List>
+        </content>
+    </Page>
+</mvc:View >

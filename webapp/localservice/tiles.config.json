@@ -1,0 +1,16 @@
+{
+    "TileCollection":[
+        {
+            "Title":"Productos",
+            "Descripcion":"Listado de Productos",
+            "Icon": "sap-icon://list",
+            "View":"ViewList"
+        },
+        {
+            "Title":"Materiales",
+            "Descripcion":"Listado de Materiales",
+            "Icon": "sap-icon://list",
+            "View":"ViewMateriales"
+        }
+    ]
+}

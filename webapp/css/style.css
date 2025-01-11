@@ -1,0 +1,7 @@
+/* Enter your custom styles here */
+
+.sapMGT .sapMGTSubHdr {
+    white-space: normal; /* Permite saltos de línea */
+    word-wrap: break-word; /* Rompe palabras largas si es necesario */
+    text-overflow: clip; /* Evita el truncado de texto con puntos suspensivos */
+}

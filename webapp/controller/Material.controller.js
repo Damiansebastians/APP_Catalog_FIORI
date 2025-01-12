@@ -1,17 +1,18 @@
 sap.ui.define(
   [
     "sap/ui/core/mvc/Controller",
+    "sap/ui/core/UIComponent",
     "sap/m/MessageToast",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator",
   ],
-  (Controller, MessageToast, Filter, FilterOperator) => {
+  (Controller, UIComponent, MessageToast, Filter, FilterOperator) => {
     "use strict";
 
-    return Controller.extend("appcatalog.controller.List", {
+    return Controller.extend("appcatalog.controller.Material", {
       onInit() {},
 
-      //EVENTO PARA VISUALIZAR EL MENSAJE
+      //EVENTO PARA VISUALIZAR EL DETALLE DEL PRODUCTO
       onPressProduct(oEvent) {
         let oItem = oEvent
           .getSource()
@@ -19,7 +20,15 @@ sap.ui.define(
           .getBindingContext("mproducts")
           .getObject();
 
-        MessageToast.show(oItem.Name);
+        let indexProduct = this.getView()
+          .getModel("mproducts")
+          .getData()
+          .ProductCollection.indexOf(oItem);
+
+        let oRouter = UIComponent.getRouterFor(this);
+        oRouter.navTo("ViewDetail", {
+          productId: indexProduct,
+        });
       },
 
       // EVENTO PARA BUSCAR EN TIEMPO REAL

@@ -1,0 +1,13 @@
+<mvc:View
+    controllerName="appcatalog.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    displayBlock="true"
+    height="100%"
+    busyIndicatorDelay="0"
+>
+    <Page>
+        <Text text="{mproducts>ProductId} - {mproducts>Name}" />
+    </Page>
+</mvc:View>

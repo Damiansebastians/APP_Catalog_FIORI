@@ -101,7 +101,10 @@
         "viewType": "XML",
         "path": "appcatalog.view",
         "async": true,
-        "viewPath": "appcatalog.view"
+        "viewPath": "appcatalog.view",
+        "bypassed": {
+          "target": "TargetNotFound"
+        }
       },
       "routes": [
         {
@@ -124,6 +127,13 @@
           "target": [
             "TargetMaterial"
           ]
+        },
+        {
+          "name": "ViewDetail",
+          "pattern": "ViewDetail/{productId}",
+          "target": [
+            "TargetDetail"
+          ]
         }
       ],
       "targets": {
@@ -135,6 +145,12 @@
         },
         "TargetMaterial": {
           "name": "Material"
+        },
+        "TargetNotFound": {
+          "name": "NotFound"
+        },
+        "TargetDetail": {
+          "name": "Detail"
         }
       }
     },

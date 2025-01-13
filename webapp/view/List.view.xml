@@ -1,10 +1,10 @@
 <mvc:View controllerName="appcatalog.controller.List"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page title="Vista de Listado">
+    <Page title="Departamentos">
         <content>
             <List
-				headerText="Productos" 
+				headerText="Estructura Organizativa" 
 				headerLevel="H2" 
 				items="{Products>/}"
 				mode="SingleSelectMaster"

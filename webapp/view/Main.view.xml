@@ -1,59 +1,66 @@
-<mvc:View controllerName="appcatalog.controller.Main"
+<mvc:View
+    controllerName="appcatalog.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m" xmlns:f="sap.f">
-    <Page id="page" title="{i18n>title}">
-    <content>
-        <ScrollContainer width="100%" height="100%" vertical="true">
-            <Panel headerText="Catálogo Principal" class='sapUiTinyMargin' width="auto">
-            
-                <f:GridContainer class="sapuiSmallMargin" items="{mTiles>/TileCollection}">
-                    <f:layout>
-                        <f:GridContainerSettings rowSize="5rem" columnSize="5rem" gap="1rem" />
-                    </f:layout>
-                    <f:layoutS>
-                        <f:GridContainerSettings rowSize="4rem" columnSize="4rem" gap="0.5rem" />
-                    </f:layoutS>
-                        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
-                            header="{mTiles>Title}" 
-                            subheader="{mTiles>Descripcion}" 
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <ScrollContainer
+                width="100%"
+                height="100%"
+                vertical="true"
+            >
+                <Panel
+                    headerText="MIS APLICACIONES"
+                    class='sapUiTinyMargin'
+                    width="auto"
+                >
+                    <f:GridContainer
+                        class="sapuiSmallMargin"
+                        items="{mTiles>/TileCollection}"
+                    >
+                        <f:layout>
+                            <f:GridContainerSettings
+                                rowSize="5rem"
+                                columnSize="5rem"
+                                gap="1rem"
+
+                            />
+                        </f:layout>
+                        <f:layoutS>
+                            <f:GridContainerSettings
+                                rowSize="4rem"
+                                columnSize="3rem"
+                                gap="3rem"
+                            />
+                        </f:layoutS>
+                        <GenericTile
+                            class="tileLayout"
+                            header="{mTiles>Title}"
+                            subheader="{mTiles>Descripcion}"
                             press="OnPressTile"
                             frameType="OneByOne"
-                            headerImage="{mTiles>Icon}">
-
+                        >
                             <layoutData>
-                                    <f:GridContainerItemLayoutData rows="2" columns="2" />
+                                <f:GridContainerItemLayoutData
+                                    rows="2"
+                                    columns="2"
+                                />
                             </layoutData>
 
                             <TileContent>
-                                <ImageContent src="https://img.freepik.com/vector-premium/icono-computadora-portatil_24908-7210.jpg" />
+                                <ImageContent
+                                    src="{mTiles>Icon}"
+                                />
                             </TileContent>
                         </GenericTile>
-                </f:GridContainer>
-
-            <!-- <VBox>
-                <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
-                    header='Productos' 
-                    subheader="Nuestros artículos"
-                    frameType="OneByOne"
-                    press="OnPressTile">
-                        <TileContent>
-                            <ImageContent src="https://img.freepik.com/vector-premium/icono-computadora-portatil_24908-7210.jpg" />
-                        </TileContent>
-                </GenericTile>
-            </VBox>
-            <VBox>
-                <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
-                            header="Materiales"
-                            subheader="Nuestros Materiales" 
-                            press="OnPressTile2">
-                    <TileContent 
-                        footer="Excelente Calidad">
-                        <ImageContent src="sap-icon://home-share" />
-                    </TileContent>
-                </GenericTile>
-            </VBox> -->
-            </Panel>
-        </ScrollContainer>
-    </content>
+                    </f:GridContainer>
+                </Panel>
+            </ScrollContainer>
+        </content>
     </Page>
-</mvc:View >
+</mvc:View>

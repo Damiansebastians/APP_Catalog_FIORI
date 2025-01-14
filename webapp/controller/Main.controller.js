@@ -1,11 +1,11 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/ui/core/UIComponent"],
+  ["./Base.controller"],
 
   (Controller, UIComponent) => {
     "use strict";
 
     return Controller.extend("appcatalog.controller.Main", {
-      onInit() {},
+      onInit() { },
 
       OnPressTile(oEvent) {
         let viewRoute = oEvent
@@ -13,8 +13,7 @@ sap.ui.define(
           .getBindingContext("mTiles")
           .getObject().View;
 
-        let oRouter = UIComponent.getRouterFor(this);
-        oRouter.navTo(viewRoute);
+        this.onNavTo(viewRoute);
       },
     });
   }

@@ -1,6 +1,6 @@
 sap.ui.define(
   [
-    "sap/ui/core/mvc/Controller",
+    "./Base.controller",
     "sap/ui/model/json/JSONModel",
     "sap/m/MessageToast",
   ],

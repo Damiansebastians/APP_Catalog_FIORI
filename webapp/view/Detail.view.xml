@@ -9,7 +9,8 @@
     height="100%"
     busyIndicatorDelay="0"
 >
-    <Page title="Detalle del Material">
+    <Page title="Detalle del Material" showNavButton="true"
+        navButtonPress="onNavBack">
         <uxap:ObjectPageLayout>
             <uxap:headerTitle>
                 <uxap:ObjectPageDynamicHeaderTitle>

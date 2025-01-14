@@ -1,6 +1,7 @@
 sap.ui.define(
   [
-    "sap/ui/core/mvc/Controller",
+    // "sap/ui/core/mvc/Controller",
+    "./Base.controller",
     "sap/ui/core/UIComponent",
     "sap/m/MessageToast",
     "sap/ui/model/Filter",
@@ -25,8 +26,8 @@ sap.ui.define(
           .getData()
           .ProductCollection.indexOf(oItem);
 
-        let oRouter = UIComponent.getRouterFor(this);
-        oRouter.navTo("ViewDetail", {
+// NAVEGACIÓN POR PARAMETROS
+        this.onNavTo("ViewDetail", {
           productId: indexProduct,
         });
       },

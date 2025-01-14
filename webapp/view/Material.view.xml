@@ -1,35 +1,45 @@
-<mvc:View controllerName="appcatalog.controller.Material"
+<mvc:View
+    controllerName="appcatalog.controller.Material"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page title="Vista de Materiales">
+    xmlns="sap.m"
+>
+    <Page
+        title="Vista de Materiales"
+        showNavButton="true"
+        navButtonPress="onNavBack"
+    >
         <content>
+            <!-- BARRA DE BÚSQUEDA -->
+            <OverflowToolbar>
+                <SearchField
+                    width="100%"
+                    liveChange=".onSearch"
+                />
+                <!-- <Text text="Buscar" id="idSearchListToolbar" /> -->
+            </OverflowToolbar>
 
-<!-- BARRA DE BÚSQUEDA -->
-			<OverflowToolbar> 
-				<SearchField width="100%" liveChange=".onSearch" />
-				<!-- <Text text="Buscar" id="idSearchListToolbar" /> -->
-			</OverflowToolbar>
-
-<!-- LISTADO DE MATERIALES -->
-            <List 
-				id="listMaterial"
-				headerText="Materiales"
-				headerLevel="H2"
-				items="{path: 'mproducts>/ProductCollection'}" 
-				mode="SingleSelectMaster"
-				itemPress="onPressProduct"
-				growing="true"
-				growingThreshold="5"
-				growingScrollToLoad="false">
-		<StandardListItem
-			title="{mproducts>Name}"
-			description="{mproducts>Description}"
-			icon="{mproducts>ProductPicUrl}"
-            counter="{Products>Quantity}"
-			type="Active"
-			iconDensityAware="false"
-			iconInset="false" />
-	</List>
+            <!-- LISTADO DE MATERIALES -->
+            <List
+                id="listMaterial"
+                headerText="Materiales"
+                headerLevel="H2"
+                items="{path: 'mproducts>/ProductCollection'}"
+                mode="SingleSelectMaster"
+                itemPress="onPressProduct"
+                growing="true"
+                growingThreshold="10"
+                growingScrollToLoad="false"
+            >
+                <StandardListItem
+                    title="{mproducts>Name}"
+                    description="{mproducts>Description}"
+                    icon="{mproducts>ProductPicUrl}"
+                    counter="{Products>Quantity}"
+                    type="Active"
+                    iconDensityAware="false"
+                    iconInset="false"
+                />
+            </List>
         </content>
     </Page>
-</mvc:View >
+</mvc:View>

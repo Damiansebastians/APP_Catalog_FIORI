@@ -1,13 +1,12 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/ui/core/UIComponent"],
+  ["./Base.controller"],
 
-  (Controller, UIComponent) => {
+  (Controller) => {
     "use strict";
 
     return Controller.extend("appcatalog.controller.Detail", {
       onInit() {
-        let oRouter = UIComponent.getRouterFor(this);
-        oRouter
+        this.getRouter()
           .getRoute("ViewDetail")
           .attachMatched(this._onRouteMatched, this);
       },
@@ -28,12 +27,12 @@ sap.ui.define(
 
       //FUNCION PARA REDIRIGIR A NOT FOUND SI LA URL ES INCORRRECTA
       _onBindingChange(oEvent) {
-        let oRouter = UIComponent.getRouterFor(this);
+        let oRouter = this.getRouter();
 
         if (!oEvent.getSource().getBoundContext().getObject()) {
           oRouter.getTargets().display("TargetNotFound");
         }
-      }
+      },
     });
   }
 );

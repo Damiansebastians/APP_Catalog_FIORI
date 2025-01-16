@@ -11,6 +11,12 @@
             "Descripcion":"Listado de Materiales",
             "Icon": "https://cdn-icons-png.flaticon.com/128/10823/10823468.png",
             "View":"ViewMaterial"
+        },
+        {
+            "Title":"Formulario",
+            "Descripcion":"Formulario de Registro",
+            "Icon": "https://cdn-icons-png.flaticon.com/128/3447/3447560.png",
+            "View":"ViewForm"
         }
     ]
 }

@@ -129,6 +129,13 @@
           ]
         },
         {
+          "name": "ViewForm",
+          "pattern": "ViewForm",
+          "target": [
+            "TargetForm"
+          ]
+        },
+        {
           "name": "ViewDetail",
           "pattern": "ViewDetail/{productId}",
           "target": [
@@ -145,6 +152,9 @@
         },
         "TargetMaterial": {
           "name": "Material"
+        },
+        "TargetForm": {
+          "name": "Form"
         },
         "TargetNotFound": {
           "name": "NotFound"

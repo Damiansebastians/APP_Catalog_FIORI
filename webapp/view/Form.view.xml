@@ -57,6 +57,42 @@
                                             />
                                         </f:fields>
                                     </f:FormElement>
+
+                                    <f:FormElement label="Main Category">
+                                        <f:fields>
+                                            <ComboBox
+                                                id="cboMainCategory"
+                                                items="{ path: 'mproducts>/MainCategories', sorter: { path: 'text'}}"
+                                            >
+                                                <core:Item key="{ path: 'mproducts>key'}" text="{ path:'mproducts>text'}"/>
+                                            </ComboBox>
+                                            <ComboBox
+                                                id="cboCategory"
+                                                items="{ path: 'mproducts>/Categories', sorter: { path: 'text'}}"
+                                            >
+                                                <core:Item key="{ path: 'mproducts>key'}" text="{ path:'mproducts>text'}"/>
+                                            </ComboBox>
+                                        </f:fields>
+                                    </f:FormElement>
+
+                                    <f:FormElement label="Name">
+                                        <f:fields>
+                                            <Input
+                                                id="TxtName"
+                                                value=""
+                                            />
+                                        </f:fields>
+                                    </f:FormElement>
+
+                                    <f:FormElement label="Description">
+                                        <f:fields>
+                                            <Input
+                                                id="TxtDescription"
+                                                value=""
+                                            />
+                                        </f:fields>
+                                    </f:FormElement>
+
                                 </f:formElements>
                             </f:FormContainer>
                         </f:formContainers>

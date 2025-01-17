@@ -28,6 +28,10 @@ sap.ui.define(
                     this.getRouter().navTo("RouteMain");
                 }
             },
+
+            getById(sId) {
+                return this.getView().byId(sId);
+            },
         });
     }
 );
